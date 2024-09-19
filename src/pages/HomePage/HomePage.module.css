@@ -1,1 +1,84 @@
+.mainContainer {
+  height: 100vh;
+  padding: 2rem;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContainer p {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.loadingDots {
+  margin-bottom: 4rem;
+
+  display: flex;
+}
+
+.dot {
+  font-size: 4rem;
+  animation: jump 0.9s infinite ease-in-out;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navItem {
+  margin-bottom: 0.3rem;
+  position: relative;
+}
+
+.link {
+  color: black;
+  font-size: 3rem;
+  opacity: 0.3;
+  transition: all 0.3s;
+}
+
+.navItem::before {
+  content: ">";
+  position: absolute;
+  font-size: 3rem;
+  left: -2.5rem;
+  opacity: 0;
+}
+
+.navItem:hover .link {
+  color: blue;
+  opacity: 1;
+}
+
+.navItem:hover::before {
+  color: blue;
+  opacity: 1;
+}
