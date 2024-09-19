@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 
 import styles from "./HomePage.module.css";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className={styles.mainContainer}>
-      <p>Choose a game and let the fun begin!</p>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Choose a game and let the fun begin!</h1>
       <div className={styles.loadingDots}>
         <div className={styles.dot}>.</div>
         <div className={styles.dot}>.</div>

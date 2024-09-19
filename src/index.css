@@ -16,9 +16,25 @@ body {
 }
 
 body {
+  background-color: rgb(230, 212, 184);
+}
+
+body,
+button {
   font-size: 1.8rem;
   font-family: "VT323", monospace;
-  background-color: rgb(230, 212, 184);
+}
+
+button {
+  width: 9.5rem;
+  padding: 2rem;
+  background-color: transparent;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.2);
 }
 
 li {
