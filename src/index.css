@@ -20,21 +20,11 @@ body {
 }
 
 body,
-button {
+button,
+input,
+textarea {
   font-size: 1.8rem;
   font-family: "VT323", monospace;
-}
-
-button {
-  width: 9.5rem;
-  padding: 2rem;
-  background-color: transparent;
-  transition: all 0.3s;
-  cursor: pointer;
-}
-
-button:hover {
-  transform: scale(1.2);
 }
 
 li {

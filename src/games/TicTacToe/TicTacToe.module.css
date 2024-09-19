@@ -10,7 +10,7 @@
   gap: 2rem;
 }
 
-.grid {
+.gameBoard {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -21,7 +21,7 @@
   height: calc(100vw - 6rem);
 }
 
-.cell {
+.gameCell {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,26 +33,26 @@
   cursor: pointer;
 }
 
-.cell:nth-child(1),
-.cell:nth-child(2),
-.cell:nth-child(3) {
+.gameCell:nth-child(1),
+.gameCell:nth-child(2),
+.gameCell:nth-child(3) {
   border-top: none;
 }
 
-.cell:nth-child(3),
-.cell:nth-child(6),
-.cell:nth-child(9) {
+.gameCell:nth-child(3),
+.gameCell:nth-child(6),
+.gameCell:nth-child(9) {
   border-right: none;
 }
 
-.cell:nth-child(1),
-.cell:nth-child(4),
-.cell:nth-child(7) {
+.gameCell:nth-child(1),
+.gameCell:nth-child(4),
+.gameCell:nth-child(7) {
   border-left: none;
 }
 
-.cell:nth-child(7),
-.cell:nth-child(8),
-.cell:nth-child(9) {
+.gameCell:nth-child(7),
+.gameCell:nth-child(8),
+.gameCell:nth-child(9) {
   border-bottom: none;
 }

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 import exitIcon from "./../../assets/exit-icon.svg";
 
-import styles from "./HomeButton.module.css";
+import styles from "./../Buttons.module.css";
 
 export default function HomeButton({ className }) {
   const navigate = useNavigate();
@@ -13,7 +13,11 @@ export default function HomeButton({ className }) {
   };
 
   return (
-    <button type="button" className={className} onClick={handleGoToHome}>
+    <button
+      type="button"
+      className={`${className} ${styles.button}`}
+      onClick={handleGoToHome}
+    >
       <img
         src={exitIcon}
         alt="Exit Icon"

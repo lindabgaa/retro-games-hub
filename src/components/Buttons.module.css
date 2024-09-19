@@ -1,0 +1,21 @@
+.button {
+  width: 9.5rem;
+  padding: 2rem;
+  background-color: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: scale(1.2);
+}
+
+.icon {
+  width: 1.5rem;
+  margin-right: 0.3rem;
+}
