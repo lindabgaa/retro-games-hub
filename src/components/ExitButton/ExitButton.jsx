@@ -1,11 +1,9 @@
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 
-import exitIcon from "./../../assets/exit-icon.svg";
-
 import styles from "./../Buttons.module.css";
 
-export default function HomeButton({ className }) {
+export default function ExitButton({ className }) {
   const navigate = useNavigate();
 
   const handleGoToHome = () => {
@@ -15,20 +13,15 @@ export default function HomeButton({ className }) {
   return (
     <button
       type="button"
-      className={`${className} ${styles.button}`}
+      className={`${className} ${styles.button} ${styles.exit}`}
       onClick={handleGoToHome}
     >
-      <img
-        src={exitIcon}
-        alt="Exit Icon"
-        aria-hidden="true"
-        className={styles.icon}
-      />
-      <span>Home</span>
+      <span className={styles.span1}>{`<-|`}</span>
+      <span className={styles.span2}>Exit</span>
     </button>
   );
 }
 
-HomeButton.propTypes = {
+ExitButton.propTypes = {
   className: PropTypes.string,
 };

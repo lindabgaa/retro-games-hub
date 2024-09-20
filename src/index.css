@@ -16,14 +16,17 @@ body {
 }
 
 body {
-  background-color: rgb(230, 212, 184);
+  background-color: #000814;
 }
 
 body,
 button,
 input,
-textarea {
+textarea,
+a {
+  color: white;
   font-size: 1.8rem;
+  font-weight: 500;
   font-family: "VT323", monospace;
 }
 

@@ -15,35 +15,13 @@ export default function TicTacToePage() {
     <div className={styles.container}>
       <div className={styles.flexGroup}>
         {!gameStarted ? (
-          <div className={styles.instructions}>
-            <h2>Instructions:</h2>
-            <ul>
-              <li>
-                <span className={styles.subtitle}>Objective:</span> Get three of
-                your marks (X or O) in a row, column, or diagonal.
-              </li>
-              <li>
-                <span className={styles.subtitle}>Gameplay:</span>
-                <ul>
-                  <li>Click an empty cell to place your mark.</li>
-                  <li>Take turns with your opponent.</li>
-                </ul>
-              </li>
-              <li>
-                <span className={styles.subtitle}>Winning:</span>
-                <ul>
-                  <li>First to get three in a row wins.</li>
-                  <li>
-                    If the grid is full and no winner, the game is a draw.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <span className={styles.subtitle}>Restart:</span> Click
-                “Restart” to play again.
-              </li>
-            </ul>
-          </div>
+          <ul className={styles.instructions}>
+            <li>{`> Click an empty cell to place your mark (X or 0).`}</li>
+            <li>{`> Take turns with your opponent.`}</li>
+            <li>{`> First to get three marks in a row wins.`}</li>
+            <li>{`> If the grid is full and no winner, the game is a draw.`}</li>
+            <li>{`> Click “Restart” to play again.`}</li>
+          </ul>
         ) : null}
 
         <TicTacToe gameStarted={gameStarted} onGameStart={handleGameStart} />

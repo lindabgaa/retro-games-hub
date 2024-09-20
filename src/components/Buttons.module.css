@@ -1,7 +1,8 @@
 .button {
-  width: 9.5rem;
-  padding: 2rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
   background-color: transparent;
+  border: none;
 
   display: flex;
   justify-content: center;
@@ -12,10 +13,21 @@
 }
 
 .button:hover {
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
 
-.icon {
-  width: 1.5rem;
-  margin-right: 0.3rem;
+.exit .span1 {
+  display: block;
+}
+
+.exit .span2 {
+  display: none;
+}
+
+.exit:hover .span1 {
+  display: none;
+}
+
+.exit:hover .span2 {
+  display: block;
 }

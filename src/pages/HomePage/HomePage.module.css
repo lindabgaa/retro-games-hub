@@ -8,14 +8,8 @@
   align-items: center;
 }
 
-.title {
-  text-align: center;
-  font-size: 4rem;
-  margin-bottom: 2rem;
-}
-
 .loadingDots {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 
   display: flex;
 }
@@ -59,9 +53,8 @@
 }
 
 .link {
-  color: black;
-  font-size: 3rem;
-  opacity: 0.3;
+  font-size: 4rem;
+  opacity: 0.7;
   transition: all 0.3s;
 }
 
