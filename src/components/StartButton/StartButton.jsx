@@ -8,6 +8,7 @@ export default function StartButton({ onClick, className }) {
       type="button"
       className={`${className} ${styles.button}`}
       onClick={onClick}
+      aria-label="start the game"
     >
       Start
     </button>

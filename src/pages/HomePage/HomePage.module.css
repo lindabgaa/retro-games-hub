@@ -8,39 +8,6 @@
   align-items: center;
 }
 
-.loadingDots {
-  margin-bottom: 1rem;
-
-  display: flex;
-}
-
-.dot {
-  font-size: 4rem;
-  animation: jump 0.9s infinite ease-in-out;
-}
-
-.dot:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.dot:nth-child(2) {
-  animation-delay: 0.3s;
-}
-
-.dot:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
-@keyframes jump {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
 .navList {
   display: flex;
   flex-direction: column;

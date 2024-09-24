@@ -8,6 +8,7 @@ export default function RestartButton({ onClick, className }) {
       type="button"
       className={`${className} ${styles.button}`}
       onClick={onClick}
+      aria-label="restart the game"
     >
       Restart
     </button>

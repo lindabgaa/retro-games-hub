@@ -1,5 +1,4 @@
 .button {
-  margin-bottom: 2rem;
   font-size: 3rem;
   background-color: transparent;
   border: none;
@@ -13,7 +12,12 @@
 }
 
 .button:hover {
-  transform: scale(1.5);
+  color: blue;
+  transform: scale(1.2);
+}
+
+.exit:hover {
+  color: red;
 }
 
 .exit .span1 {

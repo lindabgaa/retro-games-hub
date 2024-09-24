@@ -1,16 +1,18 @@
+.gameContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .feedback {
-  font-size: 2.4rem;
+  text-align: center;
+  font-size: 3rem;
   margin-bottom: 7rem;
 }
 
-.buttonContainer {
-  margin-bottom: 4rem;
-
-  display: grid;
-  gap: 2rem;
-}
-
 .gameBoard {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -19,6 +21,8 @@
   max-height: 40rem;
   width: calc(100vw - 6rem);
   height: calc(100vw - 6rem);
+
+  margin-bottom: 10rem;
 }
 
 .gameCell {
@@ -55,4 +59,22 @@
 .gameCell:nth-child(8),
 .gameCell:nth-child(9) {
   border-bottom: none;
+}
+
+.winningCell {
+  color: green;
+}
+
+.drawCell {
+  color: red;
+}
+
+.prev {
+  opacity: 0.2;
+}
+
+.buttonContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
 }

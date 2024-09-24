@@ -5,11 +5,6 @@ import styles from "./HomePage.module.css";
 export default function HomePage() {
   return (
     <div className={styles.container}>
-      <div className={styles.loadingDots}>
-        <div className={styles.dot}>.</div>
-        <div className={styles.dot}>.</div>
-        <div className={styles.dot}>.</div>
-      </div>
       <nav>
         <ul className={styles.navList}>
           <li className={styles.navItem}>
