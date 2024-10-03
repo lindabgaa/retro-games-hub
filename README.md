@@ -28,8 +28,8 @@ This project is a simple game library built with **JavaScript**, **React**, and 
 
 ## Installation & Setup
 
-1. Clone the repository: `git clone https://github.com/your-username/games-library.git`
-2. Navigate to the project directory: `cd games-library`
+1. Clone the repository: `git clone https://github.com/your-username/playEasy.git`
+2. Navigate to the project directory: `cd playEasy`
 3. Install dependencies: `npm install`
 4. Install libraries:
    - If you’re using PropTypes for type-checking, install it by running: `npm install prop-types`
@@ -47,8 +47,6 @@ This project is a simple game library built with **JavaScript**, **React**, and 
 - New Games: Expand the game library by adding more classic games or user-requested ones.
 
 ## Demo
-
-Link or description of a live demo (if available).
 
 ## Contributing
 
