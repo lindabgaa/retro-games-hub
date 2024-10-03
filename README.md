@@ -1,8 +1,7 @@
-# Project Name
+# playEasy - REACT/VITE Project
 
-[![CodeFactor](https://www.codefactor.io/repository/github/lindabgaa/project-name/badge)](https://www.codefactor.io/repository/github/lindabgaa/project-name)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue)](MIT%20License)
-![API Status](https://img.shields.io/badge/API%20Status-Online-brightgreen) (optional)
+[![CodeFactor](https://www.codefactor.io/repository/github/lindabgaa/playeasy/badge)](https://www.codefactor.io/repository/github/lindabgaa/playeasy)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
 ## Description
 
