@@ -3,8 +3,6 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/lindabgaa/playeasy/badge)](https://www.codefactor.io/repository/github/lindabgaa/playeasy)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
-## Description
-
 This project is a simple game library built with **JavaScript**, **React**, and **CSS**. It uses the Vite build tool for fast development. The app features a minimalist interface, allowing users to easily select and play a variety of classic games such as Tic-Tac-Toe, Mastermind, Hangman, and more.
 
 ## Features
