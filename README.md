@@ -1,5 +1,6 @@
 # playEasy - REACT/VITE Project
 
+![Project Status](https://img.shields.io/badge/in%20progress-orange)
 [![CodeFactor](https://www.codefactor.io/repository/github/lindabgaa/playeasy/badge)](https://www.codefactor.io/repository/github/lindabgaa/playeasy)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
