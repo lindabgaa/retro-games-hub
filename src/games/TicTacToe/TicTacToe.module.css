@@ -1,4 +1,4 @@
-.gameContainer {
+.gameWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,10 +71,4 @@
 
 .prev {
   opacity: 0.2;
-}
-
-.buttonContainer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
 }

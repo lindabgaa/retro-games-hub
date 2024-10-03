@@ -1,53 +1,26 @@
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 
-import { checkAllCellsFilled, checkValidCombination, randomPlayer } from "./utils.js";
-
-import ExitButton from "./../../components/ExitButton/ExitButton";
-import RestartButton from "./../../components/RestartButton/RestartButton";
-import StartButton from "./../../components/StartButton/StartButton";
+import { checkAllCellsFilled, checkValidCombination } from "./utils.js";
 
 import styles from "./TicTacToe.module.css";
 
-export default function TicTacToe({ gameStarted, setGameStarted }) {
-  const [gameBoard, setGameBoard] = useState([
-    [" ", " ", " "],
-    [" ", " ", " "],
-    [" ", " ", " "],
-  ]);
-  const [currentPlayer, setCurrentPlayer] = useState(null);
-  const [gameFinished, setGameFinished] = useState(false);
-  const [feedbackMessage, setFeedbackMessage] = useState(null);
-  const [hasFirstMoveBeenMade, setHasFirstMoveBeenMade] = useState(false);
-
+export default function TicTacToe({
+  gameStarted,
+  gameFinished,
+  setGameFinished,
+  gameBoard,
+  setGameBoard,
+  currentPlayer,
+  setCurrentPlayer,
+  hasFirstMoveBeenMade,
+  setHasFirstMoveBeenMade,
+  feedback,
+  setFeedback,
+  winningCells,
+  setWinningCells,
+}) {
   const [hoveredCell, setHoveredCell] = useState({ r: null, c: null });
-  const [winningCells, setWinningCells] = useState([]);
-
-  // Start Game Button - initializes the game
-  const handleGameStart = () => {
-    setGameStarted(true);
-
-    // Randomly assigns the first player to start
-    const player = randomPlayer();
-    setCurrentPlayer(player);
-  };
-
-  // Restart Game Button - resets the game board and game states
-  const handleGameRestart = () => {
-    setGameFinished(false);
-    setHasFirstMoveBeenMade(false);
-    setWinningCells([]);
-    setFeedbackMessage(`Game On! Player ${currentPlayer} is starting`);
-
-    setGameBoard(
-      gameBoard.map((row) => {
-        return row.map(() => " ");
-      }),
-    );
-
-    const player = randomPlayer();
-    setCurrentPlayer(player);
-  };
 
   // Check if the game is finished (win or draw)
   const checkGameFinished = (gameBoard, currentPlayer) => {
@@ -56,14 +29,13 @@ export default function TicTacToe({ gameStarted, setGameStarted }) {
 
     if (winningCombination || isDraw) {
       setGameFinished(true);
-      console.log(winningCombination);
 
       if (winningCombination) {
-        setFeedbackMessage(`Congratulations! Player ${currentPlayer} wins the game!`);
+        setFeedback(`Congratulations! Player ${currentPlayer} wins the game!`);
 
         setWinningCells(winningCombination);
       } else {
-        setFeedbackMessage(`It's a draw!`);
+        setFeedback(`It's a draw!`);
       }
     }
   };
@@ -111,22 +83,16 @@ export default function TicTacToe({ gameStarted, setGameStarted }) {
   };
 
   useEffect(() => {
-    if (gameStarted) {
-      if (!gameFinished) {
-        if (!hasFirstMoveBeenMade) {
-          setFeedbackMessage(`Game On! Player ${currentPlayer} is starting`);
-        } else {
-          setFeedbackMessage(`Player ${currentPlayer}'s turn`);
-        }
-      }
+    if (!gameFinished) {
+      setFeedback(`Player ${currentPlayer}'s turn`);
     }
-  }, [gameStarted, hasFirstMoveBeenMade, currentPlayer, gameFinished]);
+  }, [currentPlayer, gameFinished, setFeedback]);
 
   return (
-    <div className={styles.gameContainer}>
+    <div className={styles.gameWrapper}>
       {gameStarted ? (
         <>
-          <p className={styles.feedback}>{feedbackMessage ? `> ${feedbackMessage} <` : null}</p>
+          <p className={styles.feedback}>{feedback ? `> ${feedback} <` : null}</p>
 
           <div className={styles.gameBoard}>
             {gameBoard.map((row, rIndex) => {
@@ -175,20 +141,23 @@ export default function TicTacToe({ gameStarted, setGameStarted }) {
           </div>
         </>
       ) : null}
-
-      <div className={styles.buttonContainer}>
-        <ExitButton />
-        {!gameStarted ? (
-          <StartButton onClick={handleGameStart} />
-        ) : (
-          <RestartButton onClick={handleGameRestart} />
-        )}
-      </div>
     </div>
   );
 }
 
 TicTacToe.propTypes = {
   gameStarted: PropTypes.bool.isRequired,
-  setGameStarted: PropTypes.func.isRequired,
+  gameFinished: PropTypes.bool.isRequired,
+  setGameFinished: PropTypes.func.isRequired,
+  gameBoard: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string.isRequired).isRequired)
+    .isRequired,
+  setGameBoard: PropTypes.func.isRequired,
+  currentPlayer: PropTypes.string.isRequired,
+  setCurrentPlayer: PropTypes.func.isRequired,
+  hasFirstMoveBeenMade: PropTypes.bool.isRequired,
+  setHasFirstMoveBeenMade: PropTypes.func.isRequired,
+  feedback: PropTypes.string.isRequired,
+  setFeedback: PropTypes.func.isRequired,
+  winningCells: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  setWinningCells: PropTypes.func.isRequired,
 };

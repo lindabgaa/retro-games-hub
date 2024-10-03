@@ -1,4 +1,4 @@
-.container {
+.contentWrapper {
   height: 100vh;
   padding: 3rem;
 
@@ -8,6 +8,14 @@
   align-items: center;
 }
 
-.instructions {
+.instructionsList {
   font-size: 2rem;
+}
+
+.controlsWrapper {
+  margin-top: 4rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
 }

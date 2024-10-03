@@ -1,0 +1,52 @@
+.gameWrapper {
+  height: 80%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.feedback {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.placeholderWrapper {
+  font-size: 3rem;
+}
+
+.placeholderItem {
+  margin-right: 3rem;
+}
+
+.placeholderItem:last-child {
+  margin-right: 0;
+}
+
+.keyboardWrapper {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 3rem;
+}
+
+.keyboardKey:nth-child(21) {
+  grid-column: 3 / 4;
+}
+
+.keyboardKey {
+  font-size: 3rem;
+  background-color: transparent;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.keyboardKey:hover {
+  transform: scale(1.5);
+  color: blue;
+}
+
+.keyboardKey:disabled {
+  pointer-events: none;
+}

@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-import { generateRandomWord } from "../../games/Hangman/utils";
+import { generateRandomWord } from "./utils";
 
 import ExitButton from "./../../components/ExitButton/ExitButton";
 import RestartButton from "./../../components/RestartButton/RestartButton";
 import StartButton from "./../../components/StartButton/StartButton";
-import Hangman from "./../../games/Hangman/Hangman";
+import HangmanGame from "./../../games/HangmanGame/HangmanGame";
 
 import styles from "./HangmanPage.module.css";
 
@@ -13,38 +13,31 @@ export default function HangmanPage() {
   const [isGameStarted, setIsGameStarted] = useState(false);
   const [isGameFinished, setIsGameFinished] = useState(false);
   const [feedback, setFeedback] = useState(null);
-  const [hiddenWord, setHiddenWord] = useState(["P", "I", "Z", "Z", "A"]);
+  const [hiddenWord, setHiddenWord] = useState([]);
   const [wordCompletion, setWordCompletion] = useState([]);
   const [availableLetters, setAvailableLetters] = useState("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""));
   const [failedAttempts, setFailedAttempts] = useState(0);
 
-  const handleGameStart = () => {
-    setIsGameStarted(true);
+  const resetGame = () => {
     setIsGameFinished(false);
     setFeedback("Game On! Start Guessing your first letter!");
 
     const randomWord = generateRandomWord();
     setHiddenWord(randomWord);
-    setWordCompletion(
-      randomWord.map(() => {
-        return "_";
-      }),
-    );
+
+    setWordCompletion(randomWord.map(() => "_"));
+
+    setAvailableLetters("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""));
+    setFailedAttempts(0);
+  };
+
+  const handleGameStart = () => {
+    setIsGameStarted(true);
+    resetGame();
   };
 
   const handleGameRestart = () => {
-    setIsGameFinished(false);
-    setFailedAttempts(0);
-    setAvailableLetters("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""));
-    setFeedback("Game On! Start Guessing your first letter!");
-
-    const randomWord = generateRandomWord();
-    setHiddenWord(randomWord);
-    setWordCompletion(
-      randomWord.map(() => {
-        return "_";
-      }),
-    );
+    resetGame();
   };
 
   return (
@@ -67,9 +60,7 @@ export default function HangmanPage() {
         </>
       ) : (
         <>
-          <Hangman
-            handleGameRestart={handleGameRestart}
-            isGameStarted={isGameStarted}
+          <HangmanGame
             isGameFinished={isGameFinished}
             setIsGameFinished={setIsGameFinished}
             failedAttempts={failedAttempts}

@@ -1,0 +1,101 @@
+.figureWrapper {
+  position: relative;
+  width: 50%;
+  height: 15rem;
+}
+
+.pole {
+  height: 100%;
+  width: 0.2rem;
+  background-color: white;
+}
+
+.base {
+  position: absolute;
+  bottom: 0;
+  left: -5rem;
+  width: 10rem;
+  height: 0.2rem;
+  background-color: white;
+}
+
+.crossbeam {
+  position: absolute;
+  top: 0;
+  width: 10rem;
+  height: 0.2rem;
+  background-color: white;
+}
+
+.rope {
+  position: absolute;
+  top: 0.2rem;
+  left: calc(10rem - 0.2rem);
+  width: 0.2rem;
+  height: 3rem;
+  background-color: white;
+}
+
+.body {
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  top: 3rem;
+  left: calc(10rem - 1.1rem);
+}
+
+.head {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.torso {
+  width: 0.2rem;
+  height: 5rem;
+  background-color: white;
+}
+
+.arms {
+  position: absolute;
+  top: 3rem;
+  width: 5rem;
+}
+
+.leftArm,
+.rightArm {
+  background-color: white;
+  width: 2.5rem;
+  height: 0.2rem;
+}
+
+.leftArm {
+  transform: rotate(30deg);
+}
+
+.rightArm {
+  transform: rotate(-30deg);
+}
+
+.legs {
+  position: absolute;
+  width: 5rem;
+  top: 7.4rem;
+}
+
+.leftLeg,
+.rightLeg {
+  background-color: white;
+  width: 2.5rem;
+  height: 0.2rem;
+}
+
+.leftLeg {
+  transform: rotate(-30deg);
+}
+
+.rightLeg {
+  transform: rotate(30deg);
+}
