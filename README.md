@@ -1,7 +1,7 @@
-# playEasy - REACT/VITE Project
+# Games Library - React/Vite project
 
 ![Project Status](https://img.shields.io/badge/Project%20Status-In%20Progress-orange)
-[![CodeFactor](https://www.codefactor.io/repository/github/lindabgaa/playeasy/badge)](https://www.codefactor.io/repository/github/lindabgaa/playeasy)
+[![CodeFactor](https://www.codefactor.io/repository/github/lindabgaa/games-library/badge)](https://www.codefactor.io/repository/github/lindabgaa/games-library)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
 This project is a simple game library built with **JavaScript**, **React**, and **CSS**. It uses the Vite build tool for fast development. The app features a minimalist interface, allowing users to easily select and play a variety of classic games such as Tic-Tac-Toe, Mastermind, Hangman, and more.
@@ -20,8 +20,7 @@ This project is a simple game library built with **JavaScript**, **React**, and 
 
 ## Plugins / Libraries
 
-- @vitejs/plugin-react
-- @vitejs/plugin-react-swc
+- **@vitejs/plugin-react** uses **Babel** for Fast Refresh
 - **_PropTypes_**: A library used for type-checking React component props, helping to ensure that components receive the correct data types.
 - **_React Router_**: A library for managing navigation and routing within the app, enabling users to easily switch between different games.
 
