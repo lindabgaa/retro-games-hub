@@ -1,6 +1,6 @@
 # playEasy - REACT/VITE Project
 
-![Project Status](https://img.shields.io/badge/Status-in%20progress-orange)
+![Project Status](https://img.shields.io/badge/Project%20Status-In%20Progress-orange)
 [![CodeFactor](https://www.codefactor.io/repository/github/lindabgaa/playeasy/badge)](https://www.codefactor.io/repository/github/lindabgaa/playeasy)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
@@ -22,8 +22,8 @@ This project is a simple game library built with **JavaScript**, **React**, and 
 
 - @vitejs/plugin-react
 - @vitejs/plugin-react-swc
-- PropTypes: A library used for type-checking React component props, helping to ensure that components receive the correct data types.
-- React Router: A library for managing navigation and routing within the app, enabling users to easily switch between different games.
+- **_PropTypes_**: A library used for type-checking React component props, helping to ensure that components receive the correct data types.
+- **_React Router_**: A library for managing navigation and routing within the app, enabling users to easily switch between different games.
 
 ## Installation & Setup
 
@@ -51,4 +51,4 @@ This project is a simple game library built with **JavaScript**, **React**, and 
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for more information.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
